@@ -1,0 +1,32 @@
+# Binaries
+*.exe
+*.out
+*.bin
+
+# Go build artifacts
+bin/
+dist/
+
+# Dependency folder 
+vendor/
+
+# Environment file 
+.env
+
+# Database files
+*.db
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Uploads
+uploads/
+
+# IDE files
+.vscode/
+.idea/
+*.test
