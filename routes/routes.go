@@ -2,6 +2,6 @@ package routes
 
 import "github.com/gin-gonic/gin"
 
-func Router(router *gin.Engine){
-	
+func Router(router *gin.Engine) {
+	AuthRoutes(router)
 }

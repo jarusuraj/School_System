@@ -4,22 +4,16 @@ import (
 	"encoding/json"
 
 	tollbooth "github.com/didip/tollbooth/v7"
+	"github.com/jarusuraj/schoolsystem/models"
 
 	tollbooth_gin "github.com/didip/tollbooth_gin"
 	"github.com/gin-gonic/gin"
 )
 
-type Message struct {
-	Status string `json:"status"`
-	Body   string `json:"body"`
-}
-type RateLimitConfig struct {
-	Limit  float64
-	Status string
-	Body   string
-}
-func RateLimit(cfg RateLimitConfig) gin.HandlerFunc {
-	msg := Message{
+
+
+func RateLimit(cfg models.RateLimitConfig) gin.HandlerFunc {
+	msg := models.Message{
 		Status: cfg.Status,
 		Body:   cfg.Body,
 	}
