@@ -19,7 +19,7 @@ func AuthRoutes(r *gin.Engine) {
 
 	auth.POST("/login", middlewares.RateLimit(
 		models.RateLimitConfig{
-			Limit:  50.0 / 60.0,
+			Limit:  5.0 / 60.0,
 			Status: "Request Failed",
 			Body:   "API is at capacity, try again later.",
 		}), controllers.Login)
